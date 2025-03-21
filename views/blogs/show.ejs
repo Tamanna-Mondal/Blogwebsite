@@ -1,0 +1,31 @@
+<% layout('layouts/boilerplate.ejs') %>
+<body>
+    <div class="blog-details-container">
+       
+        <div class="details-blogs">
+            <img src="<%= blog.image %>">
+            <i class="blog-author">By: <%= blog.username %></i>
+            <h4 class="blog-title"><%= blog.subject %></h4>
+            <p class="blog-content"><%= blog.content %></p>
+        </div>
+
+        <div class="blog-actions">
+            <form action="/byteblog/<%= blog.id %>/update" method="get">
+                <button class="update-btn">Update</button>
+            </form>
+            
+            <form action="/byteblog/<%= blog.id %>?_method=DELETE" method="post">
+                <button class="delete-btn">Delete</button>
+            </form>
+        </div>
+       <h4>Reviews</h4>
+        <form action="/listings/<%=blog.id %>/review/<%=  review.id %>" method="post">
+            <label for="rating">Rating</label>
+              <input type="range" min="1" max="5" name="rating" id="rating">
+              <label for="comment">Comment</label>
+              <input type="text" id="comment" name="comment">
+
+              <button>Submit</button>
+        </form>
+    </div>
+</body>

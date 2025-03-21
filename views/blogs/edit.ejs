@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate.ejs') %>
+<body>
+    <h2>Edit Blog Post</h2>
+
+    <form action="/byteblog/<%= user._id %>?_method=PATCH" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="<%= user.username %>" required>
+          <br><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" value="<%= user.subject %>" required>
+        <br><br>
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required><%= user.content %></textarea>
+        <br><br>
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" name="image" value="<%= user.image %>">
+        <br><br>
+        <button type="submit">Update Post</button>
+    </form>
+
+ 
+</body>
+

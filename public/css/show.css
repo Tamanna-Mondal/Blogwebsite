@@ -1,0 +1,82 @@
+/* Blog Details Container */
+.blog-details-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Blog Image */
+.details-blogs img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Blog Author */
+.blog-author {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Blog Title */
+.blog-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Blog Content */
+.blog-content {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Blog Actions */
+.blog-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Buttons */
+.update-btn, .delete-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.update-btn {
+    background: #007bff;
+    color: white;
+}
+
+.update-btn:hover {
+    background: #0056b3;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #a71d2a;
+}
+
+
